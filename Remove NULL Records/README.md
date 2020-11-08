@@ -19,4 +19,4 @@ The script takes the source csv file name from the command line itself.
 Example: $ python NULL_remove.py my_csv_file.csv
 
 :star: This script covers one important problem I faced!
-Read more about it in this <a href="https://tanishkblog2020.wordpress.com/2020/11/10/problem-of-floating-point-precision-in-pandas/">blog article</a>.
+Read more about it in this <a href="https://tanishkblog2020.wordpress.com/2020/11/10/problem-of-floating-point-precision-in-pandas/" target="_blank">blog article</a>.
