@@ -20,3 +20,5 @@ Example: $ python NULL_remove.py my_csv_file.csv
 
 :star: This script covers one important problem I faced!
 Read more about it in this <a href="https://tanishkblog2020.wordpress.com/2020/11/10/problem-of-floating-point-precision-in-pandas/" target="_blank">blog article</a>.
+
+Sample CSV File: <a href="https://support.spatialkey.com/spatialkey-sample-csv-data/">Sacramento real estate transactions file</a>  
