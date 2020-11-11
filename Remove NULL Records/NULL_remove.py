@@ -3,14 +3,10 @@ import pandas as pd
 import logging
 from datetime import datetime
 
-#pd.set_option('precision', 0)
+# date_suffix helps make a unique log file for everyday
 date_suffix = datetime.today().strftime('%d%m%Y')
-# need to set following:
-# timezone
-# filename to process
-# path to file
 
-# log filename to be changed
+# Configuring the logging object
 LOG_FILENAME = 'NULL_remove.out.' + date_suffix + '.log'
 LOG_FORMAT = "%(levelname)8s | %(asctime)25s  | %(message)s"
 LOG_LEVEL = logging.DEBUG
@@ -26,7 +22,6 @@ try:
 	with open(csv_file) as file_check:
 		source_encoding = file_check.encoding 
 	df = pd.read_csv(csv_file, encoding=source_encoding, float_precision='round_trip')
-	# df = pd.read_csv(csv_file)
 
 	# The Column to check for null value. Checking the FIRST COLUMN only[for testing].
 	COLUMN_TO_CHECK = df.columns[0]
@@ -36,7 +31,7 @@ try:
 	# to remove rows containing null
 	logger.debug('Inspecting column: "'+ COLUMN_TO_CHECK +'" for NULL value') 
 	df = df.dropna(subset=[COLUMN_TO_CHECK])
-	# to remove columns containing null
+	# to remove columns containing null, uncomment the line below
 	# df = df.dropna(axis=1)
 	
 	shape_after = df.shape
