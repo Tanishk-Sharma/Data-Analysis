@@ -5,7 +5,7 @@ This is necessary to filter out the bad data for reasons like:
 
 * throwing unpredictable errors while processing
 * messing up our calculations
-* destination data store (Database/Data Warehouse) may not support inserting NULL values and throw errors.
+* destination Database may not support inserting NULL values and throw errors (Constraints).
 
 In this program, we remove rows containing NULL values.
 The part removing columns containing NULL values is commented out for now.
